@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "936350436755",
+    "project_id": "oficina-cbe6c",
+    "storage_bucket": "oficina-cbe6c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936350436755:android:40bae787d915cb1b9eec66",
+        "android_client_info": {
+          "package_name": "com.example.oficina"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "936350436755-aatdkpg0fl7spvco6h8nb9d5bpaeinr3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBz8M5mcNo6n5OTM2ENoafJFiSQ-_yvXU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "936350436755-aatdkpg0fl7spvco6h8nb9d5bpaeinr3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
