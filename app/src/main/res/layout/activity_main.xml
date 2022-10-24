@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:onClick="inserir">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/activityHome"
@@ -76,22 +76,22 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="32dp"
             android:layout_marginEnd="232dp"
             android:text="@string/txtDev"
             android:textColor="@color/txtColorDefault"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtHome" />
+            app:layout_constraintTop_toBottomOf="@+id/btSql" />
 
         <Button
             android:id="@+id/btProx"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="22dp"
-            android:text="@string/btProx"
             android:backgroundTint="@color/black"
+            android:text="@string/btProx"
             app:layout_constraintBaseline_toBaselineOf="@+id/txtDeveloped"
             app:layout_constraintStart_toEndOf="@+id/txtDeveloped"
             tools:ignore="DuplicateSpeakableTextCheck" />
@@ -102,11 +102,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="16dp"
-            android:text="@string/btAnt"
             android:backgroundTint="@color/black"
+            android:text="@string/btAnt"
             app:layout_constraintBaseline_toBaselineOf="@+id/btProx"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btProx" />
+            app:layout_constraintStart_toEndOf="@+id/btProx"
+            tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btAnt2"
@@ -128,9 +129,11 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
+            android:autofillHints=""
             android:ems="10"
             android:hint="@string/txtEdit"
             android:inputType="textPersonName"
+            android:minHeight="48dp"
             android:textColor="@color/purple_200"
             android:textColorHint="@color/purple_200"
             app:layout_constraintEnd_toStartOf="@+id/btSend"
@@ -143,10 +146,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:text="Enviar"
             android:onClick="sendMessage"
+            android:text="@string/enviar"
             app:layout_constraintBaseline_toBaselineOf="@+id/txtEdit"
             app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/btSql"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:onClick="acessarSqlite"
+            android:text="@string/btDAO"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtHome" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,12 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Oficina Pro</string>
     <string name="ofcDescription">Imagem da Oficina</string>
     <string name="textHome">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus, sapien ac egestas imperdiet, erat libero aliquam neque, at egestas libero diam ac mauris. Aliquam erat volutpat. Vestibulum tempor gravida mattis. Sed vitae tempus dui. Quisque tristique scelerisque mi, in eleifend arcu dignissim ut. Quisque ut erat nec libero dignissim venenatis eget ac velit. Cras interdum rutrum risus, at luctus ligula tincidunt dignissim. Nulla facilisi. Etiam tincidunt imperdiet mauris, et aliquet nibh porttitor malesuada. Aliquam pharetra neque non lorem vulputate fermentum. In hac habitasse platea dictumst. Integer volutpat enim at congue lobortis. Aliquam pellentesque faucibus ex, vel placerat dui fringilla vehicula.</string>
     <string name="Discipline">Desenvolvimento de Plataformas Móveis</string>
-    <string name="btProx">Next</string>
+    <string name="btDAO">Sqlite</string>
+    <string name="btProx">Prox</string>
     <string name="txtEdit">Digite</string>
+    <string name="txtMessage">Click "Resultado"</string>
     <string name="txtEditBack">Digite algo novamente</string>
     <string name="txtDev">Developed by Ezequiel</string>
     <string name="btAnt">Back</string>
     <string name="Author">Ezequiel Sousa - 2116308</string>
+    <string name="enviar">Enviar</string>
 </resources>
