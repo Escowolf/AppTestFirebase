@@ -1,17 +1,20 @@
 package com.example.oficina
 
+import android.content.ContentValues
+import android.content.Intent
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
+
 class DaoAccess : AppCompatActivity() {
     private var banco: SQLiteDatabase? = null
-    private var Saida: TextView? = null
+    //private var Saida: TextView? = null
+    private var Resultado: TextView? = null
     private var btInserir: Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,8 +22,12 @@ class DaoAccess : AppCompatActivity() {
         setContentView(R.layout.activity_dao_access)
 
         // obtém componentes
-        Saida = findViewById(R.id.txtMessage)
+        //Saida = findViewById(R.id.txtMessage)
+        Resultado = findViewById(R.id.textView)
         btInserir = findViewById(R.id.btInserir)
+
+        val button: Button = findViewById(R.id.btPesquisa)
+
 
         // abre o banco de dados
         banco = openOrCreateDatabase("sqliteapp", MODE_PRIVATE, null)
@@ -54,11 +61,11 @@ class DaoAccess : AppCompatActivity() {
         }
     }
 
+
     fun pesquisar(view: View?) {
         if (banco != null) {
             val saida = StringBuffer(500)
-           //val ID = findViewById<EditText>(R.id.txtId)
-            val cursor: Cursor = banco!!.rawQuery("SELECT ID, Nome FROM Pessoa JOIN", null )
+            val cursor: Cursor = banco!!.rawQuery("SELECT ID, Nome FROM Pessoa", null )
             val indID: Int = cursor.getColumnIndex("ID")
             val indNome: Int = cursor.getColumnIndex("Nome")
             cursor.moveToFirst()
@@ -72,8 +79,34 @@ class DaoAccess : AppCompatActivity() {
             } while (cursor.moveToNext())
 
             // exibe a saída
-            Saida!!.text = saida.toString()
+            //Saida!!.text = saida.toString()
         }
     }
+
+    fun pesquisar2(view: View?) {
+        if (banco != null) {
+            val resultado = StringBuffer(500)
+            var rId : Any? = findViewById(R.id.txtEditId)
+            val cursor: Cursor = banco!!.rawQuery("SELECT ID, Nome FROM Pessoa id like ${rId}", null )
+            val indID: Int = cursor.getColumnIndex("ID")
+            val indNome: Int = cursor.getColumnIndex("Nome")
+            resultado.append(
+                    """
+                        ${cursor.getInt(indID).toString()}, ${cursor.getString(indNome).toString()}
+                        
+                        """.trimIndent()
+                )
+
+            // exibe a saída
+            Resultado!!.text = resultado.toString()
+        }
+    }
+    fun acessarSqlite(view: View) {
+        val intent = Intent(this, DaoAccess::class.java).apply {
+            //
+        }
+        startActivity(intent)
+    }
+
 }
 

@@ -13,4 +13,6 @@
     <string name="btAnt">Back</string>
     <string name="Author">Ezequiel Sousa - 2116308</string>
     <string name="enviar">Enviar</string>
+    <string name="digte_um_id">Digte um Id</string>
+    <string name="textview">RESULTADO</string>
 </resources>

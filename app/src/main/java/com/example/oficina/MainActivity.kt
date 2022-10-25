@@ -23,8 +23,8 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun acessarSqlite(view: View) {
-        val intent = Intent(this, DaoAccess::class.java).apply {
+    fun acessarInicio(view: View) {
+        val intent = Intent(this, MainActivity::class.java).apply {
             //
         }
         startActivity(intent)
